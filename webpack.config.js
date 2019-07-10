@@ -8,6 +8,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name][hash].min.js'
     },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/
+            }
+        ]
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
