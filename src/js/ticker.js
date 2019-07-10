@@ -1,8 +1,8 @@
 /*
  * @Author: 伊丽莎不白 
  * @Date: 2019-07-10 11:01:48 
- * @Last Modified by: morigen
- * @Last Modified time: 2019-07-10 11:52:37
+ * @Last Modified by: 伊丽莎不白
+ * @Last Modified time: 2019-07-10 15:12:44
  */
 class Ticker {
     constructor () {
@@ -116,8 +116,11 @@ class Ticker {
         this._timerId = setTimeout(this._update.bind(this), this._delay);
     }
 
+    /**
+     * 执行定时函数
+     */
     _executeFunc () {
-        // 定时执行函数队列，每次取数组首项进行时间校验
+        // 取数组首项进行时间校验
         if (this._executeFuncs[0] && this._executeFuncs[0].time < this._systemTime) {
             // 取出数组首项并执行
             let value = this._executeFuncs.shift();
