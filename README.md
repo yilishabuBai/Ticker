@@ -5,7 +5,7 @@
 ## 使用示例
 
 ```js
-<script type="text/javascript" src="../lib/ticker.min.js"></script>
+<script type="text/javascript" src="./lib/ticker.min.js"></script>
 <script>
     // 使用Ticker
 </script>
