@@ -4,6 +4,8 @@
 
 ## 使用示例
 
+启动
+
 ```js
 Ticker.start(); // 启动Ticker，此时systemTime为0
 ```
