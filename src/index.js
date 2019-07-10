@@ -1,4 +1,5 @@
-import Ticker from './js/ticker';
+// import Ticker from './js/ticker';
+import Ticker from './ts/ticker';
 
 var root = document.getElementById('root');
 var updateNode = document.createElement('div');
