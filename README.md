@@ -4,6 +4,8 @@
 
 ## 使用示例
 
+启动
+
 ```js
 Ticker.start(); // 启动Ticker，此时systemTime为0
 ```
@@ -31,7 +33,7 @@ Ticker.register(callback);
 
 ```js
 function callback () {
-    console.log('1000毫秒后，我会打印.');
+    console.log('1000毫秒后，我会打印');
 }
 
 Ticker.registerDelay(callback, 1000);
