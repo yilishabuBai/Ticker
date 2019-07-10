@@ -31,7 +31,7 @@ Ticker.register(callback);
 
 ```js
 function callback () {
-    console.log('1000毫秒后，我会打印.');
+    console.log('1000毫秒后，我会打印');
 }
 
 Ticker.registerDelay(callback, 1000);
