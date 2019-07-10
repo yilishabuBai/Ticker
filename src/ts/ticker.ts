@@ -1,8 +1,8 @@
 /*
- * @Author: morigen 
+ * @Author: 伊丽莎不白 
  * @Date: 2019-07-05 17:17:30 
- * @Last Modified by: morigen
- * @Last Modified time: 2019-07-10 15:32:09
+ * @Last Modified by: 伊丽莎不白
+ * @Last Modified time: 2019-07-10 15:35:20
  */
 export default class Ticker {
     static _ticker: Ticker = new Ticker();
