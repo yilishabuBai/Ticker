@@ -3,10 +3,13 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        'index': './src/index.js',
+        '../lib/ticker': './src/lib/ticker-expose.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name][hash].min.js'
+        filename: '[name].min.js'
     },
     module: {
         rules: [
@@ -15,6 +18,10 @@ module.exports = {
                 use: 'ts-loader',
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/
+            },
+            {
+                test: path.resolve(__dirname, 'src/lib/ticker-expose.js'),
+                use: 'expose-loader?Ticker'
             }
         ]
     },
@@ -23,7 +30,16 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, 'public/index.html'),
             title: 'Ticker测试',
-            hash: true
+            hash: true,
+            chunks: ['index']
+        }),
+        new HTMLWebpackPlugin({
+            inject: "head",
+            filename: 'index-lib.html',
+            template: path.resolve(__dirname, 'public/index-lib.html'),
+            title: 'TickerLib测试',
+            hash: true,
+            chunks: ['../lib/ticker']
         })
     ],
     resolve: {

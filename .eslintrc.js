@@ -43,9 +43,6 @@ module.exports = {
         'no-var': 'off'
     },
     globals: {
-        XDomainRequest: true,
-        swfobject: true,
-        GomePlayer: true,
-        PlayerVersion: true
+        Ticker: true
     }
 };

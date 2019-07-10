@@ -4,6 +4,13 @@
 
 ## 使用示例
 
+```js
+<script type="text/javascript" src="../lib/ticker.min.js"></script>
+<script>
+    // 使用Ticker
+</script>
+```
+
 启动
 
 ```js
@@ -48,3 +55,39 @@ function callback () {
 
 Ticker.registerTimer(callback, 1000);
 ```
+
+## 目录说明
+
+* ./src/ts TypeScript源码
+* ./src/js JavaScript源码
+* ./lib 发布出的ticker包
+
+## 脚本命令说明
+
+**安装依赖模块**
+
+~~~
+npm install
+~~~
+
+### package.json中已有script说明如下
+
+**本地服务器**
+
+~~~
+npm run server
+~~~
+
+可访问http://loacalhost:8000/
+
+**编译**
+
+~~~
+npm run build
+~~~
+
+该脚本会打包项目，生成文件在./lib中
+
+~~~
+./lib/ticker.min.js Ticker库，可直接加载后使用
+~~~
