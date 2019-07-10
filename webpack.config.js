@@ -26,6 +26,9 @@ module.exports = {
             hash: true
         })
     ],
+    resolve: {
+        extensions: ['.js', '.ts']
+    },
     devServer: {
         host: '0.0.0.0',
         port: 8000,
